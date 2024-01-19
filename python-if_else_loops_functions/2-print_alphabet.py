@@ -1,3 +1,3 @@
 import string
 for char in string.ascii_lowercase:
-    print(f"{char}", end=' ') 
+    print(f"{char}", end=' ')
