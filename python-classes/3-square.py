@@ -17,4 +17,7 @@ class Square:
 
 
     def area(self):
+        """
+            Return a the current aquare area
+        """
         return self.__size ** 2
