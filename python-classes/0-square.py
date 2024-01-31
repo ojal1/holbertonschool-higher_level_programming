@@ -1,6 +1,10 @@
 #!/usr/bin/python3
 """ 
-An empty class
+    Create a class call Square
 """
+
+
 class Square:
+    """ A empty class
+    """    
     aSquare = {}
