@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """Module: 3-say_my_name"""
+
+
 def say_my_name(first_name, last_name=""):
     """
     Description: Print a name
@@ -13,4 +15,4 @@ def say_my_name(first_name, last_name=""):
     if last_name is not "":
         print("My name is {} {}".format(first_name, last_name))
     else:
-        print("My name is {} {}".format(first_name, last_name))
+        print("My name is {}{}".format(first_name, last_name))
