@@ -1,43 +1,28 @@
-"""
-    Divide all elements of a matrix by a given divisor.
+The "matrix_divided" doctest
+========================
 
-    Parameters:
-    - matrix (list of lists): The matrix to be divided. Each element must be an integer or float.
-    - div (int or float): The divisor for the division operation.
+Tests the matrix_divided function from 2-matrix_divided
+for any edge cases that may break the functionality
+of the imported function.
 
-    Returns:
-    - list of lists: A new matrix with the result of the division rounded to 2 decimal places.
-
-    Raises:
-    - TypeError: If div is not a number, matrix is not a matrix of integers/floats, or rows have different sizes.
-    - ZeroDivisionError: If div is zero.
-
-    Examples:
-    >>> matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
-    >>> matrix_divided(matrix, 2)
-    [[0.5, 1.0, 1.5], [2.0, 2.5, 3.0], [3.5, 4.0, 4.5]]
-
-    >>> matrix = [[10, 20, 30], [40, 50, 60], [70, 80, 90]]
-    >>> matrix_divided(matrix, 5)
-    [[2.0, 4.0, 6.0], [8.0, 10.0, 12.0], [14.0, 16.0, 18.0]]
-
-    >>> matrix_divided([[1, 2, 3], [4, 5, "6"], [7, 8, 9]], 2)
-    Traceback (most recent call last):
-        ...
-    TypeError: matrix must be a matrix (list of lists) of integers/floats
-
-    >>> matrix_divided([[1, 2, 3], [4, 5, 6], [7, 8]], 2)
-    Traceback (most recent call last):
-        ...
-    TypeError: Each row of the matrix must have the same size
-
-    >>> matrix_divided([[1, 2, 3], [4, "5", 6], [7, 8, 9]], "2")
-    Traceback (most recent call last):
-        ...
-    TypeError: div must be a number
-
-    >>> matrix_divided([[1, 2, 3], [4, 5, 6], [7, 8, 9]], 0)
-    Traceback (most recent call last):
-        ...
-    ZeroDivisionError: division by zero
-    """
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+>>> try:
+...     matrix_divided([[1, 2 ,3], ["a", "b", "c"]], 3)
+... except TypeError as e:
+...     print(e)
+matrix must be a matrix (list of lists) of integers/floats
+>>> try:
+...     matrix_divided([[1, 2 ,3], [4, 5]], 3)
+... except TypeError as e:
+...     print(e)
+Each row of the matrix must have the same size
+>>> try:
+...     matrix_divided([[1, 2, 3], [4, 5, 6]], "hello")
+... except TypeError as e:
+...     print(e)
+div must be a number
+>>> try:
+...     matrix_divided([[1, 2, 3], [4, 5, 6]], 0)
+... except ZeroDivisionError as e:
+...     print(e)
+division by zero
