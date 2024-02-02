@@ -1,5 +1,7 @@
 #!/usr/bin/python3
+"""Module: 5-text_indentation"""
 def text_indentation(text):
+    """text - text must be a string"""
     if type(text) is not str:
         raise TypeError("text must be a string")
     i = 0
