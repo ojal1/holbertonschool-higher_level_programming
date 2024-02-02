@@ -15,6 +15,6 @@ def say_my_name(first_name, last_name=""):
     if first_name is not "" and last_name is not "":
         print("My name is {} {}".format(first_name, last_name))
     elif first_name is not "":
-        print("My name is {}".format(first_name))
+        print("My name is {} ".format(first_name))
     else:
         print("My name is {}".format(last_name))
