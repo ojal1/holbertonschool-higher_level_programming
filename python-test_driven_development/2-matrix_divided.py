@@ -1,5 +1,13 @@
 #!/usr/bin/python3
+"""
+    Module Name: 0-add_integer
+"""
+
 def matrix_divided(matrix, div):
+    """
+    Description: Divides all elements of a matrix
+    matrix is a list of integers or floats
+    """
     if type(div) is not int:
         raise TypeError("div must be a number")
     if div == 0:
