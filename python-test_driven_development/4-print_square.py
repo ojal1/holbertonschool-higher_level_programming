@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """Module: 4-print_square.py"""
+
+
 def print_square(size):
     """size - size of square"""
     if type(size) is not int:
