@@ -1,4 +1,4 @@
-#!/usr/bin/pyhton3
+#!/usr/bin/python3
 """
 Module: 0-rectangule.py
 Create an empty class
