@@ -1,2 +1,3 @@
 #!/usr/bin/pyhton3
-class Rectangle:()
+class Rectangle:
+    pass
