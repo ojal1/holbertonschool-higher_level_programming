@@ -3,5 +3,7 @@
 
 
 class Rectangle:
-    """Create an empty class"""
+    """
+        Create an empty class
+    """
     pass
