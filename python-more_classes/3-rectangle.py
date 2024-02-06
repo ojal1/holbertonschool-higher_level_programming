@@ -44,7 +44,7 @@ class Rectangle:
     def __str__(self):
         hash = ""
         if self.__width == 0 or self.__height == 0:
-            return 0
+            return ""
         for _ in range(self.__height):
             hash += '#' * self.__width
             hash += '\n'
