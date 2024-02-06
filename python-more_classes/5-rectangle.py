@@ -56,4 +56,3 @@ class Rectangle:
     def __del__(self):
         print("Bye rectangle...")
         Rectangle(self.__height, self.__width)
-        
