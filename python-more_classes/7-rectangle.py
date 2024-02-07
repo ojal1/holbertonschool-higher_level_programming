@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Module: 6-rectangle"""
+"""Module: 7-rectangle"""
 
 
 class Rectangle:
