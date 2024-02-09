@@ -3,5 +3,6 @@
 
 
 class BaseGeometry:
+    """Plubic instance that raise a message"""
     def area(self):
         raise Exception("area() is not implemented")
