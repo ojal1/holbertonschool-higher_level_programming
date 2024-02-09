@@ -1,22 +1,7 @@
 #!/usr/bin/python3
 """Create a class"""
 
-
-class BaseGeometry:
-    """
-    Implemented the Exception error
-    Check if the value is an int and if is less or equal than 0
-    """
-    def area(self):
-        raise Exception("area() is not implemented")
-
-    def integer_validator(self, name, value):
-        if type(value) is not int:
-            raise TypeError("{} must be an integer".format(name))
-        if value <= 0:
-            raise ValueError("{} must be gerater than 0".format(name))
-
-
+BaseGeometry = __import__("7-base_geometry").BaseGeometry
 class Rectangle(BaseGeometry):
     """
     subclass Rectanlge
