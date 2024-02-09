@@ -17,6 +17,11 @@ class BaseGeometry:
             raise ValueError("{} must be gerater than 0".format(name))
 
 class Rectangle(BaseGeometry):
+    """
+    subclass Rectanlge
+    create two private instantation
+    and validated with integer_validator
+    """
     def __init__(self, width, height):
         self.__width = width
         self.__height = height
