@@ -1,4 +1,4 @@
-The "1-my-list" doctest
+The "1-my_list" doctest
 ========================
 Imports "my_list" function from "1-my_list"
 test for any edge cases that may break the functionality
