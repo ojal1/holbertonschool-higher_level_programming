@@ -1,12 +1,12 @@
 #!/usr/bin/python3
-"""Create a class call Rectangle"""
+"""Class call Rectangle"""
 
 
 from models.base import Base
 
 
 class Rectangle(Base):
-    """define the Rectangle"""
+    """Define the Rectangle"""
 
     def __init__(self, width, height, x=0, y=0, id=None):
         self.validator("width", width)
@@ -20,7 +20,7 @@ class Rectangle(Base):
         super().__init__(id)
 
     def validator(self, name_att, value):
-        """Create a method to validate the input"""
+        """Method to validate the input"""
 
         if type(value) is not int:
             raise TypeError(f"{name_att} must be an integer")
@@ -30,6 +30,10 @@ class Rectangle(Base):
         else:
             if value < 0:
                 raise ValueError(f"{name_att} must be >= 0")
+
+    def area(self):
+        """Method call area and return the area value"""
+        return self.width * self.height
 
     @property
     def width(self):
