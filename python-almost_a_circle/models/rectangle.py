@@ -37,7 +37,10 @@ class Rectangle(Base):
 
     def display(self):
         """Method to print # character"""
+        for _ in range(self.y):
+            print()
         for row in range(self.height):
+            print(" " * self.x, end="")
             print("#" * self.width)
 
     def __str__(self):
