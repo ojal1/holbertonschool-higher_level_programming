@@ -45,8 +45,7 @@ class Rectangle(Base):
 
     def update(self, *args):
         """Assing attributes to each argument"""
-
-        my_list = [self.id, self.width, self.height, self.x, self.y]
+        my_list = ['id', 'width', 'height', 'x', 'y']
         for name, value in zip(my_list, args):
             setattr(self, name, value)
 
