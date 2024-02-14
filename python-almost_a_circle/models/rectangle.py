@@ -43,11 +43,15 @@ class Rectangle(Base):
             print(" " * self.x, end="")
             print("#" * self.width)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """Assing attributes to each argument"""
         my_list = ['id', 'width', 'height', 'x', 'y']
-        for name, value in zip(my_list, args):
-            setattr(self, name, value)
+        if args:
+            for name, value in zip(my_list, args):
+                setattr(self, name, value)
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
 
     def __str__(self):
         """str method"""
