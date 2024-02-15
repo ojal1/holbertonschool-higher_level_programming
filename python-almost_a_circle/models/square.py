@@ -17,6 +17,16 @@ class Square(Rectangle):
         my_string += "- {}".format(self.width)
         return my_string
 
+    def update(self, *args, **kwargs):
+        """Assing attributes to each argument"""
+        my_list = ['id', 'size', 'x', 'y']
+        if args:
+            for name, value in zip(my_list, args):
+                setattr(self, name, value)
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
+
     @property
     def size(self):
         """size getter"""
