@@ -38,3 +38,11 @@ class Base:
         with open(filename, "w") as f:
             json_str = cls.to_json_string(list)
             f.write(json_str)
+
+    @staticmethod
+    def from_json_string(json_string):
+        """Return json_string"""
+        if not json_string or json_string is None:
+            json_string = []
+        else:
+            return json_string
