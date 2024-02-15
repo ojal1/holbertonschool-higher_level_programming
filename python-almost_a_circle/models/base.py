@@ -28,10 +28,13 @@ class Base:
         """writes the JSON string representation"""
         if list_objs is None:
             list_objs = []
-        filename = f"{cls.__name__}.json" # create the file name of class in .json
-        list = [] # save the list of objects to a file
+        # create the file name of class in .json
+        filename = f"{cls.__name__}.json"
+        # save the list of objects to a file
+        list = []
         for obj in list_objs:
             list.append(obj.to_dictionary())
-        with open(filename, "w") as f: # search of the file name with .json
+        # search of the file name with .json
+        with open(filename, "w") as f:
             json_str = cls.to_json_string(list)
             f.write(json_str)
