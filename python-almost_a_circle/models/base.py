@@ -55,3 +55,18 @@ class Base:
             new_instance = cls(1)
         new_instance.update(**dictionary)
         return new_instance
+
+    @classmethod
+    def load_from_file(cls):
+        filename = str(cls.__name__) + ".json"
+        try:
+            with open(filename, 'r') as f:
+                list_of_dict = cls.from_json_string(f.read())
+        except FileNotFoundError:
+            return []
+
+        object_list = []
+        for dictionary in list_of_dict:
+            object = cls.create(**dictionary)
+            object_list.append(object)
+        return object_list
