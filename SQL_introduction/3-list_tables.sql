@@ -1,2 +1,2 @@
 -- List all my tables
-SHOW tables hbtn_0c_0;
+SHOW TABLES FROM hbtn_0c_0;
