@@ -1,2 +1,2 @@
 -- List all in table
-SHOW * FROM first_table;
+SHOW * TABLE first_table FROM hbtn_0c_0;
